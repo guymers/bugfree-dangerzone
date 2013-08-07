@@ -1,5 +1,7 @@
 /vendor
 /composer.lock
+/coverage
+
 /.idea
 *.iml
 

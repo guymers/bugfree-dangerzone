@@ -34,7 +34,8 @@ class BugfreeTest extends \PHPUnit_Framework_TestCase
         }
 
         if (!$found) {
-            throw new \PHPUnit_Framework_AssertionFailedError("Element '$string' not found in array: " . print_r($array, true));
+            $message = "Element '$string' not found in array: " . print_r($array, true);
+            throw new \PHPUnit_Framework_AssertionFailedError($message);
         }
     }
 

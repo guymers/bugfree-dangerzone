@@ -3,7 +3,6 @@
 namespace bugfree\helper;
 
 
-use BadMethodCallException;
 use Phake;
 
 class UseStatementOrganizerTest extends \PHPUnit_Framework_TestCase
@@ -135,7 +134,7 @@ class UseStatementOrganizerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException BadMethodCallException
+     * @expectedException \BadMethodCallException
      */
     public function testGetLineNumberMappingWithoutLineSwap()
     {
