@@ -1,6 +1,6 @@
 <phpunit backupGlobals="true"
          backupStaticAttributes="false"
-         bootstrap="vendor/autoload.php"
+         bootstrap="src/test/resources/bootstrap.php"
          cacheTokens="false"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
@@ -15,14 +15,14 @@
 
     <testsuites>
       <testsuite name="Unit Tests">
-        <directory>src/test/</directory>
+        <directory>src/test/php</directory>
       </testsuite>
     </testsuites>
 
     <!-- Setting this filter speeds up coverage by quite a bit. Seems phpunit tries to generate coverage for vendor... -->
     <filter>
       <whitelist processUncoveredFilesFromWhitelist="true">
-        <directory suffix=".php">src/main</directory>
+        <directory suffix=".php">src/main/php</directory>
       </whitelist>
     </filter>
 </phpunit>

@@ -17,12 +17,14 @@ cleanvendor:
 
 codingstyle: depends
 	@echo " --- Coding Style ---"
-	@$(PHPCS_BIN) --standard=PSR2 src
+	@$(PHPCS_BIN) --standard=PSR2 src/main/php
+	@$(PHPCS_BIN) --standard=PSR2 src/test/php
 	@echo
 
 lint: depends
 	@echo " --- Lint ---"
-	@$(BUGFREE_BIN) lint src
+	@$(BUGFREE_BIN) lint src/main/php
+	@$(BUGFREE_BIN) lint src/test/php
 	@echo
 
 test: lint

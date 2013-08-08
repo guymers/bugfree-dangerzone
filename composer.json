@@ -32,6 +32,6 @@
     ],
 
     "autoload": {
-        "psr-0": {"bugfree\\": "src/main/"}
+        "psr-0": {"bugfree\\": "src/main/php"}
     }
 }
